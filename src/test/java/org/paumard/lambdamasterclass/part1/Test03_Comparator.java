@@ -1,9 +1,8 @@
 package org.paumard.lambdamasterclass.part1;
 
+import java.util.Comparator;
 import org.junit.Test;
 import org.paumard.lambdamasterclass.part1.model.Person;
-
-import java.util.Comparator;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,7 +27,8 @@ public class Test03_Comparator {
     @Test
     public void comparator_1() {
         Comparator<Person> cmp = null; // TODO
-
+			cmp = Comparator.comparing(Person::getLastName).thenComparing(Person::getFirstName).thenComparing(Person::getAge);
+			cmp = Comparator.nullsLast(cmp);
         assertThat(cmp.compare(michael, rod)).isLessThan(0);
         assertThat(cmp.compare(paul, paul)).isEqualTo(0);
         assertThat(cmp.compare(michael, jermaine)).isGreaterThan(0);

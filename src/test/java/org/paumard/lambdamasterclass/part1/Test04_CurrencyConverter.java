@@ -1,10 +1,9 @@
 package org.paumard.lambdamasterclass.part1;
 
+import java.time.LocalDate;
 import org.assertj.core.data.Offset;
 import org.junit.Test;
 import org.paumard.lambdamasterclass.part1.util.CurrencyConverter;
-
-import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,8 +14,8 @@ public class Test04_CurrencyConverter {
      * the following code compiles and executes correctly
      * given the CurrencyConverter interface.
      */
-    /*
-    @Test
+
+		@Test
     public void currencyConverter_1() {
 
         LocalDate date = LocalDate.of(2018, 11, 5);
@@ -54,5 +53,5 @@ public class Test04_CurrencyConverter {
         double canadianDollars = 13.0665d;
         assertThat(convertedSwissFrancs).isEqualTo(canadianDollars, Offset.offset(1e-4d));
     }
-    */
+
 }
